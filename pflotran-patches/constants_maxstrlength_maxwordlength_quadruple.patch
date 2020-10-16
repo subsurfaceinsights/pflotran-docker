@@ -1,0 +1,15 @@
+diff --git a/src/pflotran/pflotran_constants.F90 b/src/pflotran/pflotran_constants.F90
+index b9c7587b9..77f41e764 100644
+--- a/src/pflotran/pflotran_constants.F90
++++ b/src/pflotran/pflotran_constants.F90
+@@ -23,8 +23,8 @@ module PFLOTRAN_Constants_module
+   ! MODIFIED TO PREVENT COMPATIBILITY ISSUES - geh.
+   PetscInt, parameter, public :: CHECKPOINT_REVISION_NUMBER = 1
+   
+-  PetscInt, parameter, public :: MAXSTRINGLENGTH = 512
+-  PetscInt, parameter, public :: MAXWORDLENGTH = 32
++  PetscInt, parameter, public :: MAXSTRINGLENGTH = 2048
++  PetscInt, parameter, public :: MAXWORDLENGTH = 128
+   PetscInt, parameter, public :: STDOUT_UNIT = stdout
+   PetscInt, parameter, public :: OUT_UNIT = 15
+   PetscInt, parameter, public :: OUTPUT_UNIT = 16
