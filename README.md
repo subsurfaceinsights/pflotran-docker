@@ -20,7 +20,7 @@ Suppose you have a model input file in that directory called `exampleinfile.in`
 You can invoke PFLOTRAN with:
 
 ```
-$ docker run -v `realpath ./`:/data subsurfaceinsights/pflotran -pflotranin ./exampleinfile.in
+$ docker run -v $(pwd):/data subsurfaceinsights/pflotran -pflotranin ./exampleinfile.in
 ```
 
 It then run and produce output files in the directory
@@ -31,7 +31,7 @@ You can run a model in parallel by setting the `NUM_PROCESSES` environment
 variable. Following the previous example:
 
 ```
-$ docker run -e NUM_PROCESSES=6 -v `realpath ./`:/data subsurfaceinsights/pflotran -pflotranin ./exampleinfile.in
+$ docker run -e NUM_PROCESSES=6 -v $(pwd):/data subsurfaceinsights/pflotran -pflotranin ./exampleinfile.in
 ```
 
 PFLOTRAN will then be invoked with `mpirun -np 6 pflotran` to run with 6
