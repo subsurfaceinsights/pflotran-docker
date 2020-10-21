@@ -1,7 +1,7 @@
 #build pflotran
 FROM ubuntu:20.04 as pflotran-build
 ARG PETSC_VERSION=v3.13
-ARG PFLOTRAN_VERSION=v3
+ARG PFLOTRAN_VERSION=v3.0
 WORKDIR /build
 COPY ./ubuntu-pflotran-build-deps.sh .
 RUN ./ubuntu-pflotran-build-deps.sh 
