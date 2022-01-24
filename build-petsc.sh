@@ -17,7 +17,8 @@ git checkout $PETSC_VERSION
             --download-hdf5=yes \
             --download-fblaslapack=yes \
             --download-metis=yes \
-            --download-parmetis=yes 
+            --download-parmetis=yes \
+            --download-hdf5-fortran-bindings=yes
 export PETSC_DIR=`realpath ./`
 export PETSC_ARCH=arch-linux2-c-opt
 cd $PETSC_DIR
