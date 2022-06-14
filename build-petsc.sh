@@ -6,7 +6,10 @@ then
   exit 1
 fi
 PETSC_VERSION=$1
-git clone https://gitlab.com/petsc/petsc 
+if [[ ! -d petsc ]]
+then
+  git clone https://gitlab.com/petsc/petsc
+fi
 cd petsc
 git checkout $PETSC_VERSION
 ./configure --CFLAGS='-O3' \
@@ -20,7 +23,7 @@ git checkout $PETSC_VERSION
             --download-parmetis=yes \
             --download-hdf5-fortran-bindings=yes
 export PETSC_DIR=`realpath ./`
-export PETSC_ARCH=arch-linux2-c-opt
+export PETSC_ARCH=arch-linux-c-opt
 cd $PETSC_DIR
 make all -j$(nproc)
 cd ../

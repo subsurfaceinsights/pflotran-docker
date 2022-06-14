@@ -1,5 +1,5 @@
 diff --git a/src/pflotran/pflotran_constants.F90 b/src/pflotran/pflotran_constants.F90
-index a4683f9a4..4ac35ef95 100644
+index 56dd2e268..74c0e3dc4 100644
 --- a/src/pflotran/pflotran_constants.F90
 +++ b/src/pflotran/pflotran_constants.F90
 @@ -30,8 +30,8 @@ module PFLOTRAN_Constants_module
@@ -13,12 +13,3 @@ index a4683f9a4..4ac35ef95 100644
    PetscInt, parameter, public :: STDOUT_UNIT = stdout
    PetscInt, parameter, public :: DRIVER_OUT_UNIT = 14
    PetscInt, parameter, public :: FORWARD_OUT_UNIT = 15
-@@ -315,7 +315,7 @@ module PFLOTRAN_Constants_module
-   ! uninitialized values
-   PetscInt, parameter, public :: UNINITIALIZED_INTEGER = -999
-   PetscReal, parameter, public :: UNINITIALIZED_DOUBLE = -999.d0
--  
-+
-   ! maximum values
-   PetscReal, parameter, public :: MAX_DOUBLE = 1.d20
- 
