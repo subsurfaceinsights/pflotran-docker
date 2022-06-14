@@ -1,8 +1,10 @@
 #build pflotran
-FROM ubuntu:20.04 as pflotran-build
+FROM ubuntu:20.04 as pflotran-build-env
 WORKDIR /build
 COPY ./ubuntu-pflotran-build-deps.sh .
 RUN ./ubuntu-pflotran-build-deps.sh
+
+FROM pflotran-build-env as pflotran-build
 COPY ./build-petsc.sh .
 
 ARG PETSC_VERSION=v3.16.2
